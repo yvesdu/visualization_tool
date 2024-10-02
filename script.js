@@ -1,5 +1,3 @@
-// script.js
-
 // DOM elements
 const departmentFilter = document.getElementById("departmentFilter");
 const regionFilter = document.getElementById("regionFilter");
@@ -37,9 +35,9 @@ function populateFilters() {
   clearSelectOptions(genderFilter);
 
   // Add 'All' option
-  addSelectOption(departmentFilter, "All");
-  addSelectOption(regionFilter, "All");
-  addSelectOption(genderFilter, "All");
+  // addSelectOption(departmentFilter, "All");
+  // addSelectOption(regionFilter, "All");
+  // addSelectOption(genderFilter, "All");
 
   // Get unique values from dataset
   const departments = [...new Set(dataset.map((d) => d.Department))];
@@ -105,8 +103,8 @@ function drawBarChart(data) {
   d3.select(container).select("svg").remove();
 
   // Set fixed dimensions
-  const width = 500;
-  const height = 400;
+  const width = 450;
+  const height = 350;
   const margin = { top: 50, right: 20, bottom: 100, left: 70 };
   const chartWidth = width - margin.left - margin.right;
   const chartHeight = height - margin.top - margin.bottom;
