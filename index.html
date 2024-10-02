@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Employee Promotion Visualization Tool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Add this inside the body of your HTML, preferably at the top -->
+
+    <div class="container">
+      <div id="loadingMessage">Loading data, please wait...</div>
+      <h1 class="title">Employee Promotion Visualization Tool</h1>
+      <div class="instructions">
+        <p>
+          Welcome to the Employee Promotion Visualization Tool! Use the filters
+          below to explore how different races progress through an organization.
+          Hover over the charts to see detailed information.
+        </p>
+      </div>
+
+      <div class="controls">
+        <label>
+          Department:
+          <select id="departmentFilter">
+            <option value="All">All</option>
+          </select>
+        </label>
+        <label>
+          Region:
+          <select id="regionFilter">
+            <option value="All">All</option>
+          </select>
+        </label>
+        <label>
+          Gender:
+          <select id="genderFilter">
+            <option value="All">All</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="chart-container">
+        <div class="chart" id="barChartContainer">
+          <div class="tooltip" id="barChartTooltip"></div>
+        </div>
+        <div class="chart" id="lineChartContainer">
+          <div class="tooltip" id="lineChartTooltip"></div>
+        </div>
+        <div class="chart" id="pieChartContainer">
+          <div class="legend" id="pieChartLegend"></div>
+          <div class="tooltip" id="pieChartTooltip"></div>
+        </div>
+        <div class="chart" id="stackedBarChartContainer">
+          <div class="tooltip" id="stackedBarChartTooltip"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Load D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>

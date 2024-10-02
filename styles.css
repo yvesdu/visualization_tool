@@ -1,0 +1,85 @@
+/* styles.css */
+
+/* CSS Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding: 20px;
+}
+.chart-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.chart {
+  width: 500px; /* Fixed width */
+  height: 400px; /* Fixed height */
+  margin: 20px;
+  position: relative;
+}
+.controls {
+  margin: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.controls select {
+  margin: 10px;
+  padding: 5px;
+}
+.tooltip {
+  position: absolute;
+  text-align: left;
+  padding: 8px;
+  font-size: 12px;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 10; /* Ensure tooltip appears above other elements */
+}
+.axis-label {
+  font-size: 14px;
+  font-weight: bold;
+}
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+.instructions {
+  margin: 20px;
+  font-size: 16px;
+}
+.legend {
+  font-size: 14px;
+  margin: 10px;
+}
+/* Accessible focus */
+.focusable:focus {
+  outline: 2px solid #000;
+}
+/* Remove conflicting styles */
+/* svg {
+    width: 100%;
+    height: auto;
+  }
+  .chart-container,
+  .chart {
+    max-height: 100vh;
+    overflow: hidden;
+  }
+  .chart svg {
+    overflow: visible;
+  } */
+/* Loading message styling */
+#loadingMessage {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+}
